@@ -9,7 +9,7 @@ export default function HoverCards() {
           WHAT WE CAN OFFER?
         </span>
       </div>
-    <div className="w-full px-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 p-2 gap-12">
+    <div className="hoverCards w-full px-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 p-2 gap-12">
       {[
         { src: "https://plus.unsplash.com/premium_photo-1664298336349-5f509828df83?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGd5bXxlbnwwfHwwfHx8MA%3D%3D", title: "Strength", text: "Weight Lifting"},
         { src: "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njh8fGd5bXxlbnwwfHwwfHx8MA%3D%3D", title: "Cardio", text: "Zumba"},

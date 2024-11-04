@@ -2,6 +2,7 @@ import { faAngleRight, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React,{ useState } from "react";
 import Modal from "./modal";
+import { Link } from "react-router-dom";
 
 export default function TeamSection() {
   return (
@@ -16,14 +17,14 @@ export default function TeamSection() {
               These people work on making our product best.
             </p>
             {window.location.pathname == "/" ? (
-              <button
+              <Link
                 className="group px-4 py-2 mb-2 text-white text-xl mx-auto text-center rounded-full relative mt-4"
                 onClick={(e) => {
                   e.preventDefault();
                   window.location.href = "/ourTeam";
                 }}
               >
-                <a className="group-hover:border-b-0">Explore</a>
+                <span className="group-hover:border-b-0">Explore</span>
                 <FontAwesomeIcon
                   className="group-hover:opacity-0 opacity-100 duration-75 ml-1"
                   icon={faAngleRight}
@@ -33,7 +34,7 @@ export default function TeamSection() {
                   icon={faArrowRight}
                 />
                 {/* <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-orange-500 to-transparent" /> */}
-              </button>
+              </Link>
             ) : (<Modal/>)}
           </div>
           <div class="team-layout w-full lg:w-1/2 lg:mt-0 md:mt-40 mt-16 max-lg:max-w-2xl">
