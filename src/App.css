@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #0B192C;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link a { 
+  display: inline-block; /* Ensures the border is positioned correctly */
+  position: relative;
+ }
+
+.nav-link a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%; /* Full width */
+  height: 2px; /* Border height */
+  background: white; /* Border color */
+  transform: scaleX(0); /* Start scale is 0 */
+  transition: transform 0.4s ease; /* Transition effect */
+  transform-origin: bottom right; /* Animation origin */
+}
+
+.nav-link a:hover::after {
+  transform: scaleX(1); /* Scale to full width on hover */
+  transform-origin: bottom left; /* Animation origin on hover */
+}
+
+
+@media screen and (max-width: 480px) {
+  .team-layout{
+    display: none;
+  }
+  .team-section{
+    padding-top: 110%;
+  }
+}
